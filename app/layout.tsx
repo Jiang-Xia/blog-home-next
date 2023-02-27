@@ -1,5 +1,5 @@
 import './globals.css'
-
+import Header from './components/header'
 export const metadata = {
   title: '江夏的博客',
   description: '记录生活，记录你',
@@ -12,7 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+          <Header/>
+          {children}
+      </body>
     </html>
   )
 }
