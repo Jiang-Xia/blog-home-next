@@ -1,17 +1,13 @@
-import styles from './page.module.css'
-import Container from './components/container'
+import {getArticleInfo} from "@/app/api/posts/posts";
+import {transformMarkdown} from "@/lib/markdown"
 // 路径为 / 的首页
-export default function Home() {
-    return (
-    <>
-        <Container>
-            <div className="space-y-6">
-                <h1 className="text-2xl font-bold">
-                    Blog Home Next 是一个基于 React Nextjs、TypeScript、Tailwindcss、DaisyUI的个人博客前台，
-                    它使用了最新的前端技术栈，用于个人博客创建和浏览自身文章。
-                </h1>
-            </div>
-        </Container>
-    </>
+export default async function  Page({ params }: any) {
+    const data:any = await getArticleInfo('44')
+    const markdown:string =data.info.contentHtml
+    const html:string =  await transformMarkdown(markdown) as string
+    return(
+        <div className="p-2 m-auto w-full md:w-3/5">
+            <section className="md-preview default-theme md md-previewOnly" dangerouslySetInnerHTML={{ __html: html }}></section>
+        </div>
     )
 }

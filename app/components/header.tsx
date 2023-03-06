@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import Container from '../components/container'
-
 export default function Header() {
   return (
     <header className="navbar bg-base-100">
