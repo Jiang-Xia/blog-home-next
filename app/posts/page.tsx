@@ -7,7 +7,7 @@ export default async function  Posts() {
     const list:any[] = data.list
     const listItems:any[] = list.map((item:any, index:number) =>
         <div className="card w-96 bg-base-100 shadow-xl image-full mt-2 mr-2" key={item.id}>
-            <figure><Image src={item.cover} alt={item.title}/></figure>
+            <figure><img src={item.cover} alt={item.title}/></figure>
             <div className="card-body">
                 <h2 className="card-title">{item.title}</h2>
                 <p>{item.description}</p>
