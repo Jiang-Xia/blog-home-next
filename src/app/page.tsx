@@ -8,7 +8,7 @@ export default async function Page({ params }: any) {
   return (
     <div className="p-2 m-auto w-full md:w-3/5">
       <section
-        className="md-preview default-theme md md-previewOnly"
+        className="md-editor-preview default-theme md-editor-scrn" 
         dangerouslySetInnerHTML={{ __html: html }}
       ></section>
     </div>

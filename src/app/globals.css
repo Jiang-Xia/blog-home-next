@@ -1,2 +1,42 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+:root {
+  --main-color: #37cdbe;
+  --nav-color: #092756;
+  --box-shadow: 0 4px 12px #000026;
+
+  --main-bgc: #f9f9f9;
+
+  --minor-bgc: #f0f0f0;
+  --text-color: #1f2937;
+  --text-color2: #1f2937b3;
+  --hover-color: #f9f9f9;
+  --border-radius: 4px;
+  --scrollbar-bgc: #dadada;
+  --border-color: var(--minor-bgc);
+  --layout-border-radius: 8px;
+  --el-color-primary: var(--main-color);
+}
+
+:root.dark {
+  --main-color: #37cdbe;
+  --nav-color: rgba(33, 39, 48, 0.94);
+  --box-shadow: 0 4px 12px #000026;
+  --main-bgc: #222831;
+  --minor-bgc: #2a303c;
+  --text-color: rgba(255, 255, 255, 0.85);
+  --text-color2: rgba(255, 255, 255, 0.65);
+  --hover-color: rgba(255, 255, 255, 0.08);
+  --border-radius: 4px;
+  --scrollbar-bgc: #6b7280;
+  --border-color: var(--minor-bgc);
+  --el-color-primary: var(--main-color);
+}
+.md-editor-preview{
+  color: var(--text-color);
+/*  */
+}
+.md-editor-preview.default-theme blockquote{
+  background-color: var(--minor-bgc);
+}

@@ -2,6 +2,7 @@ import {marked} from 'marked'
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-tomorrow.css';
 import '@/lib/css/editor-v3.style.css'
+
 export async function  transformMarkdown(markdownString:string) {
     return  new Promise((resolve, reject)=>{
         // marked 全局变量

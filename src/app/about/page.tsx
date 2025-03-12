@@ -6,7 +6,7 @@ export default async function  Page({ params }: any) {
   const html:string =  await transformMarkdown(markdown) as string
   return(
       <div className="p-2 m-auto w-full md:w-3/5">
-        <section className="md-preview default-theme md md-previewOnly" dangerouslySetInnerHTML={{ __html: html }}></section>
+        <section className="md-editor-preview default-theme md-editor-scrn" dangerouslySetInnerHTML={{ __html: html }}></section>
       </div>
   )
 }
