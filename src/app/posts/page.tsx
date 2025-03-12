@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 export default async function  Posts() {
     const data:any = await getArticleList()
-    console.log("=================================>",data)
+    // console.log("=================================>",data)
     const list:any[] = data.list
     const listItems:any[] = list.map((item:any, index:number) =>
         <div className="card w-96 bg-base-100 shadow-xl image-full mt-2 mr-2" key={item.id}>

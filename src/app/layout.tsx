@@ -1,5 +1,5 @@
-import './globals.css'
 import Header from './components/header'
+import './globals.css'
 export const metadata = {
   title: '江夏的博客',
   description: '记录生活，记录你',
@@ -7,9 +7,9 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>)  {
   return (
     <html lang="en">
       <body>

@@ -1,9 +1,10 @@
 import {getArticleInfo} from "@/app/api/posts/posts";
 import {transformMarkdown} from "@/lib/markdown"
-// 路径为 / 的首页
 export default async function  Page({ params }: any) {
-    const data:any = await getArticleInfo('44')
-    const markdown:string =data.info.contentHtml
+    const { slug } = await params
+    const data:any = await getArticleInfo(slug)
+    // console.log('----------------->',data.info)
+    const markdown:string = data.info.content
     const html:string =  await transformMarkdown(markdown) as string
     return(
         <div className="p-2 m-auto w-full md:w-3/5">
